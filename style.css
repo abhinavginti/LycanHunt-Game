@@ -1,0 +1,140 @@
+/*------------Lycan Hunt by Abhinav Ginti--------------------------*/
+
+/*css reset*/
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    overflow: hidden;
+}
+/*game container css*/
+.gamecontainer
+{
+    background:url(Images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*INSIDE GAME CONTAINER CSS*/
+.score
+{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    right: 0;
+    padding: 15px;
+    border: 3px solid #219ff3;
+    border-radius: 10px;
+
+}
+.points
+{
+    margin: 0px 10px;
+}
+.introhidden
+{
+    display: none;
+}
+.intro p{
+    font-size: 3rem;
+    text-align: center;
+}
+.gameover
+{
+    display: none;
+}
+.gameover p
+{
+    font-size: 3rem;
+    text-align: center;
+}
+h4
+{
+    text-align: center;
+}
+.lycan
+{
+background: url(Images/Lycan.png);
+background-size: cover;
+background-repeat: no-repeat;
+width: 150px;
+height: 142px;
+position:absolute;
+bottom: 0;
+left: 10vw;
+}
+.animateLycan
+{
+    animation: lycanani 1s linear;
+}
+.dino{
+background: url(Images/dino.png);
+background-size: cover;
+background-repeat: no-repeat;
+width: 403px;
+height: 200px;
+position: absolute;
+bottom: 0;
+left: 75vw;
+}
+.dinoani
+{
+    animation: dino 5s linear infinite;
+}
+
+.wolflogo
+{
+    background: url(Images/1598359310782.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    top: 38px;
+    margin: auto;
+    display: block;
+    animation: wolflogo 4s linear infinite;
+}
+/*Keyframes*/
+@keyframes lycanani{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 400px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+@keyframes dino{
+    0%
+    {
+        left:100vw;
+    }
+    100%
+    {
+        left: -10vw;
+    }
+}
+@keyframes wolflogo{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: rotate(30deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
